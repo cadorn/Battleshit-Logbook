@@ -1,8 +1,10 @@
 
-Browse Logbook of [H.M.S Dorsetshire](http://en.wikipedia.org/wiki/HMS_Dorsetshire_%2840%29) sinking [Bismarck](http://en.wikipedia.org/wiki/German_battleship_Bismarck): [cadorn.github.io/HMS-Hood](https://cadorn.github.io/HMS-Hood/)
+View online: [cadorn.github.io/Battleshit-Logbook](https://cadorn.github.io/Battleshit-Logbook/)
 
-Also mentions:
+Mentions:
 
+  * [H.M.S Dorsetshire](http://en.wikipedia.org/wiki/HMS_Dorsetshire_%2840%29)
   * [H.M.S Hood](http://en.wikipedia.org/wiki/HMS_Hood_%2851%29)
+  * [Bismarck](http://en.wikipedia.org/wiki/German_battleship_Bismarck)
 
-![H.M.S. Dorsetshire Logbook Cover](https://cadorn.github.io/HMS-Dorsetshire-sinking-Bismarck/pages/page_01.jpg "H.M.S. Dorsetshire Logbook Cover")
+![Battleshit-Logbook Cover](https://cadorn.github.io/Battleshit-Logbook/pages/page_01.jpg "Battleshit-Logbook Cover")
