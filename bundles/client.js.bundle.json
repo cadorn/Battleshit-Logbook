@@ -9,7 +9,7 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421389276,
+              "mtime": 1421390663,
               "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation:50,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
               "globals": {
                 "JQUERY": {
@@ -229,7 +229,7 @@
             "descriptor": {
               "filename": "client.css",
               "filepath": "client.css",
-              "mtime": 1421390608,
+              "mtime": 1421390663,
               "code": "body {\n  background: #ccc;\n  width: 100%;\n  height: 100%;\n}\n\n#pages {\n  margin: 20px;\n  width: 100%;\n  height: 100%;\n}\n\n#pages .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}\n\n#pages > .page {\n  width: 600px;\n  height: 700px;\n}",
               "globals": {},
               "syntax": null,
@@ -262,8 +262,8 @@
             "descriptor": {
               "filename": "client.html",
               "filepath": "client.html",
-              "mtime": 1421390628,
-              "code": "\n<div id=\"pages\">\n\t<div class=\"page\" style=\"background-image:url(pages/01.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/02.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/03.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/04.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/05.jpg);\"></div>\n</div>\n",
+              "mtime": 1421390744,
+              "code": "\n<div id=\"pages\">\n\t<div class=\"page\" style=\"background-image:url(pages/page_01.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_02.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_03.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_04.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_05.jpg);\"></div>\n</div>\n",
               "globals": {},
               "syntax": null,
               "format": "utf8",
@@ -278,7 +278,7 @@
             "wrapper": {
               "type": "url-encoded",
               "top": null,
-              "code": "'%0A%3Cdiv%20id%3D%22pages%22%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'",
+              "code": "'%0A%3Cdiv%20id%3D%22pages%22%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'",
               "bottom": null
             },
             "dependencies": {
