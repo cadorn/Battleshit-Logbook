@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "rm -Rf .rt ; ./node_modules/.bin/pinf bundle",
-    "publish": "./node_modules/.bin/pinf-publish"
+    "publish": "npm run-script build; rm -Rf bundles; ./node_modules/.bin/pinf-publish"
   },
   "dependencies": {
     "jquery": "^2.1.3",
