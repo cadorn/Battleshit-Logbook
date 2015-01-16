@@ -10,7 +10,7 @@ exports.main = function () {
 		JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
 		var pages = [];
 		var number;
-		for (var i=1 ; i <= 31 ; i++) {
+		for (var i=1 ; i <= 33 ; i++) {
 			number = ("" + i);
 			if (number.length === 1) {
 				number = "0" + number;
