@@ -9,6 +9,9 @@ exports.main = function () {
 	JQUERY("BODY").html(require("./client.html"));
 
 	JQUERY(window).ready(function() {
+
+console.log("DOM", JQUERY('#magazine'));
+
 		JQUERY('#magazine').turn({
 			display: 'double',
 			acceleration: true,
