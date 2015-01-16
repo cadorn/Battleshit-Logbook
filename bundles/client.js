@@ -77,23 +77,43 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421386815,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421387899,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
 const JQUERY = require("jquery/dist/jquery");
-
-console.log("JQUERY", JQUERY);
-
 const TURN = require("turn/turn");
 
 
 exports.main = function () {
 
-	console.log("TURN", TURN);
+	JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
+	JQUERY("BODY").html(require("./client.html"));
+
+	JQUERY(window).ready(function() {
+		JQUERY('#magazine').turn({
+			display: 'double',
+			acceleration: true,
+			gradients: !$.isTouch,
+			elevation:50,
+			when: {
+				turned: function(e, page) {
+					/*console.log('Current view: ', $(this).turn('view'));*/
+				}
+			}
+		});
+	});
+	
+	JQUERY(window).bind('keydown', function(e) {		
+		if (e.keyCode==37) {
+			$('#magazine').turn('previous');
+		} else
+		if (e.keyCode==39) {
+			$('#magazine').turn('next');	
+		}
+	});
 
 }
-
 
 }
 , {"filename":"client.js"});
@@ -11281,6 +11301,14 @@ return jQuery;
 
 })
 , {"filename":"node_modules/jquery/dist/jquery.js"});
+// @pinf-bundle-module: {"file":"client.css","mtime":1421387816,"wrapper":"url-encoded","format":"utf8","id":"/client.css"}
+require.memoize("/client.css", 
+'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%7D%0A%0A%23magazine%20%7B%0A%20%20width%3A%201152px%3B%0A%20%20height%3A%20752px%3B%0A%7D%0A%0A%23magazine%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
+, {"filename":"client.css"});
+// @pinf-bundle-module: {"file":"client.html","mtime":1421387798,"wrapper":"url-encoded","format":"utf8","id":"/client.html"}
+require.memoize("/client.html", 
+'%0A%3Cdiv%20id%3D%22magazine%22%3E%0A%09%3Cdiv%3E%3Cspan%20class%3D%22text%22%3EPage%201%3C%2Fspan%3E%3C%2Fdiv%3E%0A%09%3Cdiv%3E%3Cspan%20class%3D%22text%22%3EPage%202%3C%2Fspan%3E%3C%2Fdiv%3E%0A%09%3Cdiv%3E%3Cspan%20class%3D%22text%22%3EPage%203%3C%2Fspan%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'
+, {"filename":"client.html"});
 // @pinf-bundle-ignore: 
 });
 // @pinf-bundle-report: {}

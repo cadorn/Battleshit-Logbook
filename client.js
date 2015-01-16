@@ -5,22 +5,30 @@ const TURN = require("turn/turn");
 
 exports.main = function () {
 
-	var flipbookNode = JQUERY('<div id="flipbook"></div>').appendTo("BODY");
-	flipbookNode.html([
-		'<div class="hard"> Turn.js </div>'
-		'<div class="hard"></div>'
-		'<div> Page 1 </div>'
-		'<div> Page 2 </div>'
-		'<div> Page 3 </div>'
-		'<div> Page 4 </div>'
-		'<div class="hard"></div>'
-		'<div class="hard"></div>'
-	].join("\n"));
+	JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
+	JQUERY("BODY").html(require("./client.html"));
 
-	JQUERY("#flipbook").turn({
-		width: 400,
-		height: 300,
-		autoCenter: true
+	JQUERY(window).ready(function() {
+		JQUERY('#magazine').turn({
+			display: 'double',
+			acceleration: true,
+			gradients: !$.isTouch,
+			elevation:50,
+			when: {
+				turned: function(e, page) {
+					/*console.log('Current view: ', $(this).turn('view'));*/
+				}
+			}
+		});
+	});
+	
+	JQUERY(window).bind('keydown', function(e) {		
+		if (e.keyCode==37) {
+			$('#magazine').turn('previous');
+		} else
+		if (e.keyCode==39) {
+			$('#magazine').turn('next');	
+		}
 	});
 
 }
