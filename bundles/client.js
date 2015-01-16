@@ -77,7 +77,7 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421388666,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421388670,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
@@ -11298,9 +11298,9 @@ return {
 };
 }
 , {"filename":"lib/turn.js/turn.js"});
-// @pinf-bundle-module: {"file":"client.css","mtime":1421387936,"wrapper":"url-encoded","format":"utf8","id":"/client.css"}
+// @pinf-bundle-module: {"file":"client.css","mtime":1421388752,"wrapper":"url-encoded","format":"utf8","id":"/client.css"}
 require.memoize("/client.css", 
-'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%7D%0A%0A%23magazine%20%7B%0A%20%20width%3A%201152px%3B%0A%20%20height%3A%20752px%3B%0A%7D%0A%0A%23magazine%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
+'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23magazine%20%7B%0A%20%20margin%3A%2020px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23magazine%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
 , {"filename":"client.css"});
 // @pinf-bundle-module: {"file":"client.html","mtime":1421387936,"wrapper":"url-encoded","format":"utf8","id":"/client.html"}
 require.memoize("/client.html", 
