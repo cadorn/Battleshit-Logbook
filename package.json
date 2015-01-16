@@ -1,0 +1,19 @@
+{
+  "main": "./client.js",
+  "mappings": {
+    "turn": "./lib/turn.js"
+  },
+  "exports": {
+    "bundles": {
+      "client.js": "./client.js"
+    }
+  },
+  "scripts": {
+    "build": "rm -Rf .rt ; ./node_modules/.bin/pinf bundle",
+    "publish": "./node_modules/.bin/pinf-publish"
+  },
+  "dependencies": {
+    "pinf-for-nodejs": "0.1.x",
+    "pinf-to-github-pages": "0.1.x"
+  }
+}
