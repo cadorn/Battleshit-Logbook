@@ -1,9 +1,9 @@
 
 const JQUERY = require("jquery/jquery");
-const TURN = require("turn/turn");
-
 
 console.log("JQUERY", JQUERY);
+
+const TURN = require("turn/turn");
 
 
 exports.main = function () {
