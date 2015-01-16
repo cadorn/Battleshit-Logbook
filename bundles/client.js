@@ -77,7 +77,7 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421391515,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421392249,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
@@ -90,7 +90,22 @@ exports.main = function () {
 	try {
 
 		JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
-		JQUERY("BODY").html(require("./client.html"));
+		var pages = [];
+		var number;
+		for (var i=1 ; i <= 31 ; i++) {
+			number = ("" + i);
+			if (number.length === 1) {
+				number = "0" + number;
+			}
+			pages.push('<div class="page" style="background-image:url(pages/page_' + number + '.jpg);"></div>');
+		}
+		JQUERY("BODY").html([
+			'<div align="center">',
+				'<div id="pages">',
+					pages.join("\n"),
+				'</div>',
+			'</div>'
+		].join("\n"));
 
 		JQUERY(window).ready(function() {
 
@@ -11290,10 +11305,6 @@ return {
 require.memoize("/client.css", 
 'body%20%7B%0A%20%20background%3A%20%23fff%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2010px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20border%3A%202px%20solid%20%23000%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
 , {"filename":"client.css"});
-// @pinf-bundle-module: {"file":"client.html","mtime":1421391954,"wrapper":"url-encoded","format":"utf8","id":"/client.html"}
-require.memoize("/client.html", 
-'%0A%3Cdiv%20align%3D%22center%22%3E%0A%09%3Cdiv%20id%3D%22pages%22%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'
-, {"filename":"client.html"});
 // @pinf-bundle-module: {"file":null,"mtime":0,"wrapper":"json","format":"json","id":"/package.json"}
 require.memoize("/package.json", 
 {
