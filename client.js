@@ -29,10 +29,10 @@ exports.main = function () {
 		
 		JQUERY(window).bind('keydown', function(e) {		
 			if (e.keyCode==37) {
-				JQUERY('#magazine').turn('previous');
+				JQUERY('#pages').turn('previous');
 			} else
 			if (e.keyCode==39) {
-				JQUERY('#magazine').turn('next');	
+				JQUERY('#pages').turn('next');	
 			}
 		});
 
