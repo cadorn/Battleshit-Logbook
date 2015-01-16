@@ -77,7 +77,7 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421388000,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421388473,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
@@ -91,6 +91,9 @@ exports.main = function () {
 	JQUERY("BODY").html(require("./client.html"));
 
 	JQUERY(window).ready(function() {
+
+console.log("DOM", JQUERY('#magazine'));
+
 		JQUERY('#magazine').turn({
 			display: 'double',
 			acceleration: true,
