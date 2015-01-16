@@ -17,8 +17,8 @@ exports.main = function () {
 				acceleration: true,
 				gradients: !JQUERY.isTouch,
 				elevation: 50,
-				width: 1300,
-				height: 800,
+				width: 1000,
+				height: 700,
 				when: {
 					turned: function(e, page) {
 						/*console.log('Current view: ', $(this).turn('view'));*/
