@@ -9,8 +9,8 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421390931,
-              "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation: 50,\n\t\t\t\twidth: 1300,\n\t\t\t\theight: 800,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
+              "mtime": 1421391152,
+              "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation: 50,\n\t\t\t\twidth: 1000,\n\t\t\t\theight: 700,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
               "globals": {
                 "JQUERY": {
                   "type": "assign"
@@ -57,7 +57,7 @@
             "wrapper": {
               "type": "commonjs",
               "top": "function(require, exports, module) {var __dirname = '';",
-              "code": "function(require, exports, module) {var __dirname = '';\n\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation: 50,\n\t\t\t\twidth: 1300,\n\t\t\t\theight: 800,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n\n}",
+              "code": "function(require, exports, module) {var __dirname = '';\n\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation: 50,\n\t\t\t\twidth: 1000,\n\t\t\t\theight: 700,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n\n}",
               "bottom": "}"
             },
             "dependencies": {
@@ -229,7 +229,7 @@
             "descriptor": {
               "filename": "client.css",
               "filepath": "client.css",
-              "mtime": 1421390954,
+              "mtime": 1421390958,
               "code": "body {\n  background: #ccc;\n  width: 100%;\n  height: 100%;\n}\n\n#pages {\n  margin: 20px;\n  width: 100%;\n  height: 100%;\n}\n\n#pages .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}",
               "globals": {},
               "syntax": null,
