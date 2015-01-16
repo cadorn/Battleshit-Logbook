@@ -1,6 +1,7 @@
 {
   "main": "./client.js",
   "mappings": {
+    "jquery": "./node_modules/jquery/dist",
     "turn": "./lib/turn.js"
   },
   "exports": {
@@ -13,6 +14,7 @@
     "publish": "./node_modules/.bin/pinf-publish"
   },
   "dependencies": {
+    "jquery": "^2.1.3",
     "pinf-for-nodejs": "0.1.x",
     "pinf-to-github-pages": "0.1.x"
   }
