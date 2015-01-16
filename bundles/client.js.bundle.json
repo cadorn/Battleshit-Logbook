@@ -9,17 +9,14 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421388670,
-              "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\n\nconsole.log(\"JQUERY\", JQUERY);\n\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\tconsole.log(\"1\");\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\n\tconsole.log(\"2\");\n\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tconsole.log(\"3\");\n\n\t\tJQUERY(window).ready(function() {\n\n\tconsole.log(\"4\");\n\n\tconsole.log(\"DOM\", JQUERY('#magazine'));\n\n\t\t\tJQUERY('#magazine').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation:50,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
+              "mtime": 1421389276,
+              "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation:50,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
               "globals": {
                 "JQUERY": {
                   "type": "assign"
                 },
                 "require": {
                   "type": "call"
-                },
-                "console": {
-                  "type": "reference"
                 },
                 "TURN": {
                   "type": "assign"
@@ -28,6 +25,9 @@
                   "type": "reference"
                 },
                 "window": {
+                  "type": "reference"
+                },
+                "console": {
                   "type": "reference"
                 }
               },
@@ -57,7 +57,7 @@
             "wrapper": {
               "type": "commonjs",
               "top": "function(require, exports, module) {var __dirname = '';",
-              "code": "function(require, exports, module) {var __dirname = '';\n\nconst JQUERY = require(\"jquery/dist/jquery\");\n\nconsole.log(\"JQUERY\", JQUERY);\n\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\tconsole.log(\"1\");\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\n\tconsole.log(\"2\");\n\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tconsole.log(\"3\");\n\n\t\tJQUERY(window).ready(function() {\n\n\tconsole.log(\"4\");\n\n\tconsole.log(\"DOM\", JQUERY('#magazine'));\n\n\t\t\tJQUERY('#magazine').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation:50,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n\n}",
+              "code": "function(require, exports, module) {var __dirname = '';\n\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation:50,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n\n}",
               "bottom": "}"
             },
             "dependencies": {
@@ -229,8 +229,8 @@
             "descriptor": {
               "filename": "client.css",
               "filepath": "client.css",
-              "mtime": 1421388752,
-              "code": "body {\n  background: #ccc;\n  width: 100%;\n  height: 100%;\n}\n\n#magazine {\n  margin: 20px;\n  width: 100%;\n  height: 100%;\n}\n\n#magazine .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}",
+              "mtime": 1421390608,
+              "code": "body {\n  background: #ccc;\n  width: 100%;\n  height: 100%;\n}\n\n#pages {\n  margin: 20px;\n  width: 100%;\n  height: 100%;\n}\n\n#pages .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}\n\n#pages > .page {\n  width: 600px;\n  height: 700px;\n}",
               "globals": {},
               "syntax": null,
               "format": "utf8",
@@ -245,7 +245,7 @@
             "wrapper": {
               "type": "url-encoded",
               "top": null,
-              "code": "'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23magazine%20%7B%0A%20%20margin%3A%2020px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23magazine%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'",
+              "code": "'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2020px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D%0A%0A%23pages%20%3E%20.page%20%7B%0A%20%20width%3A%20600px%3B%0A%20%20height%3A%20700px%3B%0A%7D'",
               "bottom": null
             },
             "dependencies": {
@@ -262,8 +262,8 @@
             "descriptor": {
               "filename": "client.html",
               "filepath": "client.html",
-              "mtime": 1421387936,
-              "code": "\n<div id=\"magazine\">\n\t<div><span class=\"text\">Page 1</span></div>\n\t<div><span class=\"text\">Page 2</span></div>\n\t<div><span class=\"text\">Page 3</span></div>\n</div>\n",
+              "mtime": 1421390628,
+              "code": "\n<div id=\"pages\">\n\t<div class=\"page\" style=\"background-image:url(pages/01.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/02.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/03.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/04.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/05.jpg);\"></div>\n</div>\n",
               "globals": {},
               "syntax": null,
               "format": "utf8",
@@ -278,7 +278,7 @@
             "wrapper": {
               "type": "url-encoded",
               "top": null,
-              "code": "'%0A%3Cdiv%20id%3D%22magazine%22%3E%0A%09%3Cdiv%3E%3Cspan%20class%3D%22text%22%3EPage%201%3C%2Fspan%3E%3C%2Fdiv%3E%0A%09%3Cdiv%3E%3Cspan%20class%3D%22text%22%3EPage%202%3C%2Fspan%3E%3C%2Fdiv%3E%0A%09%3Cdiv%3E%3Cspan%20class%3D%22text%22%3EPage%203%3C%2Fspan%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'",
+              "code": "'%0A%3Cdiv%20id%3D%22pages%22%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2F05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'",
               "bottom": null
             },
             "dependencies": {
@@ -313,10 +313,13 @@
                   "exports": {
                     "bundles": {
                       "client.js": "./client.js"
+                    },
+                    "resources": {
+                      "pages/*": "./pages/*"
                     }
                   },
                   "scripts": {
-                    "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
+                    "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
                     "publish": "./node_modules/.bin/pinf-publish",
                     "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                   },
@@ -324,11 +327,17 @@
                     "jquery": {
                       "selector": "^2.1.3"
                     },
+                    "lwip": {
+                      "selector": "0.0.6"
+                    },
                     "pinf-for-nodejs": {
                       "selector": "0.1.x"
                     },
                     "pinf-to-github-pages": {
                       "selector": "0.1.x"
+                    },
+                    "waitfor": {
+                      "selector": "^0.1.3"
                     },
                     "turn": {
                       "location": "./lib/turn.js"
@@ -354,19 +363,27 @@
                       "jquery": {
                         "location": "./node_modules/jquery"
                       },
+                      "lwip": {
+                        "location": "./node_modules/lwip"
+                      },
                       "pinf-for-nodejs": {
                         "location": "./node_modules/pinf-for-nodejs"
                       },
                       "pinf-to-github-pages": {
                         "location": "./node_modules/pinf-to-github-pages"
+                      },
+                      "waitfor": {
+                        "location": "./node_modules/waitfor"
                       }
                     }
                   },
                   "mappings": {
                     ".bin": "2ff3dd234eb25191da421162f8efcfb215189cf1-.bin",
                     "jquery": "711d4647be96f8c166800973228985d9b977f107-jquery",
+                    "lwip": "7f863b48d2bb76307f1137207a9454bcc8a82402-lwip",
                     "pinf-for-nodejs": "c4a92d31f3e288b82d5c985dbcbe3d12735cb33e-pinf-for-nodejs",
-                    "pinf-to-github-pages": "22dcaa4de265b99288f2071377903b52e9932048-pinf-to-github-pages"
+                    "pinf-to-github-pages": "22dcaa4de265b99288f2071377903b52e9932048-pinf-to-github-pages",
+                    "waitfor": "416bf2c65cd8db6a197939f8a9c5b953245a0d2f-waitfor"
                   }
                 },
                 "package.json": {
@@ -375,11 +392,17 @@
                       "jquery": {
                         "selector": "^2.1.3"
                       },
+                      "lwip": {
+                        "selector": "0.0.6"
+                      },
                       "pinf-for-nodejs": {
                         "selector": "0.1.x"
                       },
                       "pinf-to-github-pages": {
                         "selector": "0.1.x"
+                      },
+                      "waitfor": {
+                        "selector": "^0.1.3"
                       },
                       "turn": {
                         "location": "./lib/turn.js"
@@ -392,11 +415,17 @@
                       "jquery": {
                         "location": "./node_modules/jquery"
                       },
+                      "lwip": {
+                        "location": "./node_modules/lwip"
+                      },
                       "pinf-for-nodejs": {
                         "location": "./node_modules/pinf-for-nodejs"
                       },
                       "pinf-to-github-pages": {
                         "location": "./node_modules/pinf-to-github-pages"
+                      },
+                      "waitfor": {
+                        "location": "./node_modules/waitfor"
                       }
                     }
                   },
@@ -404,8 +433,11 @@
                     "bundles": {
                       "client.js": "./client.js"
                     },
+                    "resources": {
+                      "pages/*": "./pages/*"
+                    },
                     "scripts": {
-                      "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
+                      "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
                       "publish": "./node_modules/.bin/pinf-publish",
                       "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                     },
@@ -422,8 +454,10 @@
                   "mappings": {
                     ".bin": "2ff3dd234eb25191da421162f8efcfb215189cf1-.bin",
                     "jquery": "711d4647be96f8c166800973228985d9b977f107-jquery",
+                    "lwip": "7f863b48d2bb76307f1137207a9454bcc8a82402-lwip",
                     "pinf-for-nodejs": "c4a92d31f3e288b82d5c985dbcbe3d12735cb33e-pinf-for-nodejs",
-                    "pinf-to-github-pages": "22dcaa4de265b99288f2071377903b52e9932048-pinf-to-github-pages"
+                    "pinf-to-github-pages": "22dcaa4de265b99288f2071377903b52e9932048-pinf-to-github-pages",
+                    "waitfor": "416bf2c65cd8db6a197939f8a9c5b953245a0d2f-waitfor"
                   }
                 }
               },
@@ -433,11 +467,17 @@
                     "jquery": {
                       "selector": "^2.1.3"
                     },
+                    "lwip": {
+                      "selector": "0.0.6"
+                    },
                     "pinf-for-nodejs": {
                       "selector": "0.1.x"
                     },
                     "pinf-to-github-pages": {
                       "selector": "0.1.x"
+                    },
+                    "waitfor": {
+                      "selector": "^0.1.3"
                     },
                     "turn": {
                       "location": "./lib/turn.js"
@@ -450,11 +490,17 @@
                     "jquery": {
                       "location": "./node_modules/jquery"
                     },
+                    "lwip": {
+                      "location": "./node_modules/lwip"
+                    },
                     "pinf-for-nodejs": {
                       "location": "./node_modules/pinf-for-nodejs"
                     },
                     "pinf-to-github-pages": {
                       "location": "./node_modules/pinf-to-github-pages"
+                    },
+                    "waitfor": {
+                      "location": "./node_modules/waitfor"
                     }
                   }
                 },
@@ -462,8 +508,11 @@
                   "bundles": {
                     "client.js": "./client.js"
                   },
+                  "resources": {
+                    "pages/*": "./pages/*"
+                  },
                   "scripts": {
-                    "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
+                    "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
                     "publish": "./node_modules/.bin/pinf-publish",
                     "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                   },
@@ -480,8 +529,10 @@
                 "mappings": {
                   ".bin": "2ff3dd234eb25191da421162f8efcfb215189cf1-.bin",
                   "jquery": "711d4647be96f8c166800973228985d9b977f107-jquery",
+                  "lwip": "7f863b48d2bb76307f1137207a9454bcc8a82402-lwip",
                   "pinf-for-nodejs": "c4a92d31f3e288b82d5c985dbcbe3d12735cb33e-pinf-for-nodejs",
-                  "pinf-to-github-pages": "22dcaa4de265b99288f2071377903b52e9932048-pinf-to-github-pages"
+                  "pinf-to-github-pages": "22dcaa4de265b99288f2071377903b52e9932048-pinf-to-github-pages",
+                  "waitfor": "416bf2c65cd8db6a197939f8a9c5b953245a0d2f-waitfor"
                 }
               },
               "warnings": [
