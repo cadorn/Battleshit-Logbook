@@ -9,7 +9,7 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421387899,
+              "mtime": 1421388000,
               "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tJQUERY(window).ready(function() {\n\t\tJQUERY('#magazine').turn({\n\t\t\tdisplay: 'double',\n\t\t\tacceleration: true,\n\t\t\tgradients: !$.isTouch,\n\t\t\televation:50,\n\t\t\twhen: {\n\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t});\n\t\n\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\tif (e.keyCode==37) {\n\t\t\t$('#magazine').turn('previous');\n\t\t} else\n\t\tif (e.keyCode==39) {\n\t\t\t$('#magazine').turn('next');\t\n\t\t}\n\t});\n\n}\n",
               "globals": {
                 "JQUERY": {
@@ -229,7 +229,7 @@
             "descriptor": {
               "filename": "client.css",
               "filepath": "client.css",
-              "mtime": 1421387816,
+              "mtime": 1421387936,
               "code": "body {\n  background: #ccc;\n}\n\n#magazine {\n  width: 1152px;\n  height: 752px;\n}\n\n#magazine .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}",
               "globals": {},
               "syntax": null,
@@ -262,7 +262,7 @@
             "descriptor": {
               "filename": "client.html",
               "filepath": "client.html",
-              "mtime": 1421387798,
+              "mtime": 1421387936,
               "code": "\n<div id=\"magazine\">\n\t<div><span class=\"text\">Page 1</span></div>\n\t<div><span class=\"text\">Page 2</span></div>\n\t<div><span class=\"text\">Page 3</span></div>\n</div>\n",
               "globals": {},
               "syntax": null,
@@ -316,7 +316,7 @@
                     }
                   },
                   "scripts": {
-                    "build": "./node_modules/.bin/pinf bundle",
+                    "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
                     "publish": "./node_modules/.bin/pinf-publish",
                     "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                   },
@@ -405,7 +405,7 @@
                       "client.js": "./client.js"
                     },
                     "scripts": {
-                      "build": "./node_modules/.bin/pinf bundle",
+                      "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
                       "publish": "./node_modules/.bin/pinf-publish",
                       "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                     },
@@ -463,7 +463,7 @@
                     "client.js": "./client.js"
                   },
                   "scripts": {
-                    "build": "./node_modules/.bin/pinf bundle",
+                    "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
                     "publish": "./node_modules/.bin/pinf-publish",
                     "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                   },

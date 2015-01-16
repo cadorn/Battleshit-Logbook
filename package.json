@@ -10,7 +10,7 @@
     }
   },
   "scripts": {
-    "build": "./node_modules/.bin/pinf bundle",
+    "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
     "publish": "./node_modules/.bin/pinf-publish",
     "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
   },
