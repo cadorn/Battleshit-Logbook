@@ -9,8 +9,8 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421388000,
-              "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tJQUERY(window).ready(function() {\n\t\tJQUERY('#magazine').turn({\n\t\t\tdisplay: 'double',\n\t\t\tacceleration: true,\n\t\t\tgradients: !$.isTouch,\n\t\t\televation:50,\n\t\t\twhen: {\n\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t});\n\t\n\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\tif (e.keyCode==37) {\n\t\t\t$('#magazine').turn('previous');\n\t\t} else\n\t\tif (e.keyCode==39) {\n\t\t\t$('#magazine').turn('next');\t\n\t\t}\n\t});\n\n}\n",
+              "mtime": 1421388473,
+              "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tJQUERY(window).ready(function() {\n\nconsole.log(\"DOM\", JQUERY('#magazine'));\n\n\t\tJQUERY('#magazine').turn({\n\t\t\tdisplay: 'double',\n\t\t\tacceleration: true,\n\t\t\tgradients: !$.isTouch,\n\t\t\televation:50,\n\t\t\twhen: {\n\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t});\n\t\n\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\tif (e.keyCode==37) {\n\t\t\t$('#magazine').turn('previous');\n\t\t} else\n\t\tif (e.keyCode==39) {\n\t\t\t$('#magazine').turn('next');\t\n\t\t}\n\t});\n\n}\n",
               "globals": {
                 "JQUERY": {
                   "type": "assign"
@@ -22,6 +22,9 @@
                   "type": "assign"
                 },
                 "exports": {
+                  "type": "reference"
+                },
+                "console": {
                   "type": "reference"
                 },
                 "$": {
@@ -57,7 +60,7 @@
             "wrapper": {
               "type": "commonjs",
               "top": "function(require, exports, module) {var __dirname = '';",
-              "code": "function(require, exports, module) {var __dirname = '';\n\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tJQUERY(window).ready(function() {\n\t\tJQUERY('#magazine').turn({\n\t\t\tdisplay: 'double',\n\t\t\tacceleration: true,\n\t\t\tgradients: !$.isTouch,\n\t\t\televation:50,\n\t\t\twhen: {\n\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t});\n\t\n\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\tif (e.keyCode==37) {\n\t\t\t$('#magazine').turn('previous');\n\t\t} else\n\t\tif (e.keyCode==39) {\n\t\t\t$('#magazine').turn('next');\t\n\t\t}\n\t});\n\n}\n\n}",
+              "code": "function(require, exports, module) {var __dirname = '';\n\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\tJQUERY(window).ready(function() {\n\nconsole.log(\"DOM\", JQUERY('#magazine'));\n\n\t\tJQUERY('#magazine').turn({\n\t\t\tdisplay: 'double',\n\t\t\tacceleration: true,\n\t\t\tgradients: !$.isTouch,\n\t\t\televation:50,\n\t\t\twhen: {\n\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t}\n\t\t\t}\n\t\t});\n\t});\n\t\n\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\tif (e.keyCode==37) {\n\t\t\t$('#magazine').turn('previous');\n\t\t} else\n\t\tif (e.keyCode==39) {\n\t\t\t$('#magazine').turn('next');\t\n\t\t}\n\t});\n\n}\n\n}",
               "bottom": "}"
             },
             "dependencies": {
