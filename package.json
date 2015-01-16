@@ -7,16 +7,21 @@
   "exports": {
     "bundles": {
       "client.js": "./client.js"
+    },
+    "resources": {
+      "pages/*": "./pages/*"
     }
   },
   "scripts": {
-    "build": "rm -Rf bundles; ./node_modules/.bin/pinf bundle",
+    "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
     "publish": "./node_modules/.bin/pinf-publish",
     "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
   },
   "dependencies": {
     "jquery": "^2.1.3",
+    "lwip": "0.0.6",
     "pinf-for-nodejs": "0.1.x",
-    "pinf-to-github-pages": "0.1.x"
+    "pinf-to-github-pages": "0.1.x",
+    "waitfor": "^0.1.3"
   }
 }
