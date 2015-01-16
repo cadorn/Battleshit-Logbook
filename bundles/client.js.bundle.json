@@ -9,7 +9,7 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421392395,
+              "mtime": 1421392649,
               "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tvar pages = [];\n\t\tvar number;\n\t\tfor (var i=1 ; i <= 33 ; i++) {\n\t\t\tnumber = (\"\" + i);\n\t\t\tif (number.length === 1) {\n\t\t\t\tnumber = \"0\" + number;\n\t\t\t}\n\t\t\tpages.push('<div class=\"page\" style=\"background-image:url(pages/page_' + number + '.jpg);\"></div>');\n\t\t}\n\t\tJQUERY(\"BODY\").html([\n\t\t\t'<div align=\"center\">',\n\t\t\t\t'<div id=\"pages\">',\n\t\t\t\t\tpages.join(\"\\n\"),\n\t\t\t\t'</div>',\n\t\t\t'</div>'\n\t\t].join(\"\\n\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation: 50,\n\t\t\t\twidth: 1100,\n\t\t\t\theight: 700,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#pages').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#pages').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
               "globals": {
                 "JQUERY": {
@@ -282,7 +282,7 @@
                   "scripts": {
                     "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
                     "publish": "./node_modules/.bin/pinf-publish",
-                    "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
+                    "wipup": "git add . ; git commit -m \"wip\" ; git push origin master ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                   },
                   "dependencies": {
                     "jquery": {
@@ -400,7 +400,7 @@
                     "scripts": {
                       "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
                       "publish": "./node_modules/.bin/pinf-publish",
-                      "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
+                      "wipup": "git add . ; git commit -m \"wip\" ; git push origin master ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                     },
                     "main": "./client.js"
                   },
@@ -475,7 +475,7 @@
                   "scripts": {
                     "build": "rm -Rf bundles; node build ; ./node_modules/.bin/pinf bundle",
                     "publish": "./node_modules/.bin/pinf-publish",
-                    "wipup": "git add . ; git commit -m \"wip\" ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
+                    "wipup": "git add . ; git commit -m \"wip\" ; git push origin master ; npm run-script build ; git add . ; git commit -m \"wip-build\" ; npm run-script publish"
                   },
                   "main": "./client.js"
                 },
