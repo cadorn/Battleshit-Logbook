@@ -77,7 +77,7 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421391467,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421391511,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
@@ -99,8 +99,8 @@ exports.main = function () {
 				acceleration: true,
 				gradients: !JQUERY.isTouch,
 				elevation: 50,
-				width: "100%",
-				height: "100%",
+				width: 1100,
+				height: 700,
 				when: {
 					turned: function(e, page) {
 						/*console.log('Current view: ', $(this).turn('view'));*/
