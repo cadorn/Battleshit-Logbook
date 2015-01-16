@@ -77,7 +77,7 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421388473,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421388555,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
@@ -87,34 +87,49 @@ const TURN = require("turn/turn");
 
 exports.main = function () {
 
-	JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
-	JQUERY("BODY").html(require("./client.html"));
+	try {
 
-	JQUERY(window).ready(function() {
+	console.log("1");
 
-console.log("DOM", JQUERY('#magazine'));
+		JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
 
-		JQUERY('#magazine').turn({
-			display: 'double',
-			acceleration: true,
-			gradients: !$.isTouch,
-			elevation:50,
-			when: {
-				turned: function(e, page) {
-					/*console.log('Current view: ', $(this).turn('view'));*/
+	console.log("2");
+
+		JQUERY("BODY").html(require("./client.html"));
+
+	console.log("3");
+
+		JQUERY(window).ready(function() {
+
+	console.log("4");
+
+	console.log("DOM", JQUERY('#magazine'));
+
+			JQUERY('#magazine').turn({
+				display: 'double',
+				acceleration: true,
+				gradients: !$.isTouch,
+				elevation:50,
+				when: {
+					turned: function(e, page) {
+						/*console.log('Current view: ', $(this).turn('view'));*/
+					}
 				}
+			});
+		});
+		
+		JQUERY(window).bind('keydown', function(e) {		
+			if (e.keyCode==37) {
+				$('#magazine').turn('previous');
+			} else
+			if (e.keyCode==39) {
+				$('#magazine').turn('next');	
 			}
 		});
-	});
-	
-	JQUERY(window).bind('keydown', function(e) {		
-		if (e.keyCode==37) {
-			$('#magazine').turn('previous');
-		} else
-		if (e.keyCode==39) {
-			$('#magazine').turn('next');	
-		}
-	});
+
+	} catch (err) {
+		console.error(err.stack);		
+	}
 
 }
 
