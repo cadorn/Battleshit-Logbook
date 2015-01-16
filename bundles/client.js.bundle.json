@@ -262,8 +262,8 @@
             "descriptor": {
               "filename": "client.html",
               "filepath": "client.html",
-              "mtime": 1421390748,
-              "code": "\n<div id=\"pages\">\n\t<div class=\"page\" style=\"background-image:url(pages/page_01.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_02.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_03.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_04.jpg);\"></div>\n\t<div class=\"page\" style=\"background-image:url(pages/page_05.jpg);\"></div>\n</div>\n",
+              "mtime": 1421391954,
+              "code": "\n<div align=\"center\">\n\t<div id=\"pages\">\n\t\t<div class=\"page\" style=\"background-image:url(pages/page_01.jpg);\"></div>\n\t\t<div class=\"page\" style=\"background-image:url(pages/page_02.jpg);\"></div>\n\t\t<div class=\"page\" style=\"background-image:url(pages/page_03.jpg);\"></div>\n\t\t<div class=\"page\" style=\"background-image:url(pages/page_04.jpg);\"></div>\n\t\t<div class=\"page\" style=\"background-image:url(pages/page_05.jpg);\"></div>\n\t</div>\n</div>\n",
               "globals": {},
               "syntax": null,
               "format": "utf8",
@@ -278,7 +278,7 @@
             "wrapper": {
               "type": "url-encoded",
               "top": null,
-              "code": "'%0A%3Cdiv%20id%3D%22pages%22%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'",
+              "code": "'%0A%3Cdiv%20align%3D%22center%22%3E%0A%09%3Cdiv%20id%3D%22pages%22%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'",
               "bottom": null
             },
             "dependencies": {

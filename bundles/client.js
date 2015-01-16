@@ -11290,9 +11290,9 @@ return {
 require.memoize("/client.css", 
 'body%20%7B%0A%20%20background%3A%20%23fff%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2010px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20border%3A%202px%20solid%20%23000%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
 , {"filename":"client.css"});
-// @pinf-bundle-module: {"file":"client.html","mtime":1421390748,"wrapper":"url-encoded","format":"utf8","id":"/client.html"}
+// @pinf-bundle-module: {"file":"client.html","mtime":1421391954,"wrapper":"url-encoded","format":"utf8","id":"/client.html"}
 require.memoize("/client.html", 
-'%0A%3Cdiv%20id%3D%22pages%22%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'
+'%0A%3Cdiv%20align%3D%22center%22%3E%0A%09%3Cdiv%20id%3D%22pages%22%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_01.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_02.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_03.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_04.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%09%3Cdiv%20class%3D%22page%22%20style%3D%22background-image%3Aurl(pages%2Fpage_05.jpg)%3B%22%3E%3C%2Fdiv%3E%0A%09%3C%2Fdiv%3E%0A%3C%2Fdiv%3E%0A'
 , {"filename":"client.html"});
 // @pinf-bundle-module: {"file":null,"mtime":0,"wrapper":"json","format":"json","id":"/package.json"}
 require.memoize("/package.json", 
