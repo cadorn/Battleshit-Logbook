@@ -77,7 +77,7 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421391152,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421391370,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
@@ -99,7 +99,7 @@ exports.main = function () {
 				acceleration: true,
 				gradients: !JQUERY.isTouch,
 				elevation: 50,
-				width: 1000,
+				width: 1100,
 				height: 700,
 				when: {
 					turned: function(e, page) {
@@ -11286,9 +11286,9 @@ return {
 };
 }
 , {"filename":"lib/turn.js/turn.js"});
-// @pinf-bundle-module: {"file":"client.css","mtime":1421390958,"wrapper":"url-encoded","format":"utf8","id":"/client.css"}
+// @pinf-bundle-module: {"file":"client.css","mtime":1421391395,"wrapper":"url-encoded","format":"utf8","id":"/client.css"}
 require.memoize("/client.css", 
-'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2020px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
+'body%20%7B%0A%20%20background%3A%20%23fff%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2010px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%20%20border%3A%202px%20solid%20%23000%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'
 , {"filename":"client.css"});
 // @pinf-bundle-module: {"file":"client.html","mtime":1421390748,"wrapper":"url-encoded","format":"utf8","id":"/client.html"}
 require.memoize("/client.html", 
