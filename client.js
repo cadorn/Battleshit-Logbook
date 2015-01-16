@@ -17,7 +17,7 @@ exports.main = function () {
 				acceleration: true,
 				gradients: !JQUERY.isTouch,
 				elevation: 50,
-				width: 1000,
+				width: 1100,
 				height: 700,
 				when: {
 					turned: function(e, page) {
