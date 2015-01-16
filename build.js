@@ -24,14 +24,20 @@ function main (callback) {
                     return LWIP.open(PATH.join(pagesBasePath, "raw", file), function(err, image) {
                         if (err) return callback(err);
 
-                        image
-                            .batch()
+                        var step = image;
+
+                        step = step.batch()
                             .crop(10, 10, 2333, 2683)
-                            .contain(600, 700, "white")
-                            .writeFile(targetPath, function(err) {
-                                if (err) return callback(err);
-                                return callback();
-                            });
+                            .contain(600, 700, "white");
+
+                        if (file === "page_02.jpg") {
+                            step = step.rotate(180, "white");
+                        }
+
+                        return step.writeFile(targetPath, function(err) {
+                            if (err) return callback(err);
+                            return callback();
+                        });
                     });
                 });
             });
