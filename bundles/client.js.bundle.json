@@ -9,7 +9,7 @@
             "descriptor": {
               "filename": "client.js",
               "filepath": "client.js",
-              "mtime": 1421390927,
+              "mtime": 1421390931,
               "code": "\nconst JQUERY = require(\"jquery/dist/jquery\");\nconst TURN = require(\"turn/turn\");\n\n\nexports.main = function () {\n\n\ttry {\n\n\t\tJQUERY(\"<STYLE></STYLE>\").appendTo(\"HEAD\").html(require(\"./client.css\"));\n\t\tJQUERY(\"BODY\").html(require(\"./client.html\"));\n\n\t\tJQUERY(window).ready(function() {\n\n\t\t\tJQUERY('#pages').turn({\n\t\t\t\tdisplay: 'double',\n\t\t\t\tacceleration: true,\n\t\t\t\tgradients: !JQUERY.isTouch,\n\t\t\t\televation: 50,\n\t\t\t\twidth: 1300,\n\t\t\t\theight: 800,\n\t\t\t\twhen: {\n\t\t\t\t\tturned: function(e, page) {\n\t\t\t\t\t\t/*console.log('Current view: ', $(this).turn('view'));*/\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t});\n\t\t});\n\t\t\n\t\tJQUERY(window).bind('keydown', function(e) {\t\t\n\t\t\tif (e.keyCode==37) {\n\t\t\t\tJQUERY('#magazine').turn('previous');\n\t\t\t} else\n\t\t\tif (e.keyCode==39) {\n\t\t\t\tJQUERY('#magazine').turn('next');\t\n\t\t\t}\n\t\t});\n\n\t} catch (err) {\n\t\tconsole.error(err.stack);\t\t\n\t}\n\n}\n",
               "globals": {
                 "JQUERY": {
@@ -229,8 +229,8 @@
             "descriptor": {
               "filename": "client.css",
               "filepath": "client.css",
-              "mtime": 1421390663,
-              "code": "body {\n  background: #ccc;\n  width: 100%;\n  height: 100%;\n}\n\n#pages {\n  margin: 20px;\n  width: 100%;\n  height: 100%;\n}\n\n#pages .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}\n\n#pages > .page {\n  width: 600px;\n  height: 700px;\n}",
+              "mtime": 1421390954,
+              "code": "body {\n  background: #ccc;\n  width: 100%;\n  height: 100%;\n}\n\n#pages {\n  margin: 20px;\n  width: 100%;\n  height: 100%;\n}\n\n#pages .turn-page {\n  background-color: #ccc;\n  background-size: 100% 100%;\n}",
               "globals": {},
               "syntax": null,
               "format": "utf8",
@@ -245,7 +245,7 @@
             "wrapper": {
               "type": "url-encoded",
               "top": null,
-              "code": "'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2020px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D%0A%0A%23pages%20%3E%20.page%20%7B%0A%20%20width%3A%20600px%3B%0A%20%20height%3A%20700px%3B%0A%7D'",
+              "code": "'body%20%7B%0A%20%20background%3A%20%23ccc%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20%7B%0A%20%20margin%3A%2020px%3B%0A%20%20width%3A%20100%25%3B%0A%20%20height%3A%20100%25%3B%0A%7D%0A%0A%23pages%20.turn-page%20%7B%0A%20%20background-color%3A%20%23ccc%3B%0A%20%20background-size%3A%20100%25%20100%25%3B%0A%7D'",
               "bottom": null
             },
             "dependencies": {
