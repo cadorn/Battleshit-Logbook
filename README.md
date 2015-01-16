@@ -7,7 +7,6 @@ Mentions:
   * [H.M.S Dorsetshire](http://en.wikipedia.org/wiki/HMS_Dorsetshire_%2840%29)
   * [H.M.S Hood](http://en.wikipedia.org/wiki/HMS_Hood_%2851%29)
   * [H.M.S Suffolk](http://en.wikipedia.org/wiki/HMS_Suffolk_%2855%29)
-  * [H.M.S Suffolk](http://en.wikipedia.org/wiki/HMS_Suffolk_%2855%29)
   * [H.M.S Norfolk](http://en.wikipedia.org/wiki/HMS_Norfolk_%2878%29)
   * [H.M.S Prince of Wales](http://en.wikipedia.org/wiki/HMS_Prince_of_Wales_%2853%29)
   * [H.M.S Electra](http://en.wikipedia.org/wiki/HMS_Electra_%28H27%29)
