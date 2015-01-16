@@ -8,7 +8,22 @@ exports.main = function () {
 	try {
 
 		JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
-		JQUERY("BODY").html(require("./client.html"));
+		var pages = [];
+		var number;
+		for (var i=1 ; i<= 31 ; i++) {
+			number = ("" + i);
+			if (number.length === 1) {
+				number = "0" + number;
+			}
+			pages.push('<div class="page" style="background-image:url(pages/page_' + number + '.jpg);"></div>');
+		}
+		JQUERY("BODY").html([
+			'<div align="center">',
+				'<div id="pages">',
+					pages.join("\n")
+				'</div>',
+			'</div>'
+		].join("\n"));
 
 		JQUERY(window).ready(function() {
 
