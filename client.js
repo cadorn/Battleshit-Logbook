@@ -1,5 +1,5 @@
 
-const JQUERY = require("jquery/jquery");
+const JQUERY = require("jquery/dist/jquery");
 
 console.log("JQUERY", JQUERY);
 
