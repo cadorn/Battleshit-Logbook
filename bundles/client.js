@@ -77,11 +77,14 @@ function wrapAMD(callback) {
     callback(amdRequire, wrappedDefine);
     return exports;
 }
-// @pinf-bundle-module: {"file":"client.js","mtime":1421388555,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
+// @pinf-bundle-module: {"file":"client.js","mtime":1421388666,"wrapper":"commonjs","format":"commonjs","id":"/client.js"}
 require.memoize("/client.js", 
 function(require, exports, module) {var __dirname = '';
 
 const JQUERY = require("jquery/dist/jquery");
+
+console.log("JQUERY", JQUERY);
+
 const TURN = require("turn/turn");
 
 
@@ -108,7 +111,7 @@ exports.main = function () {
 			JQUERY('#magazine').turn({
 				display: 'double',
 				acceleration: true,
-				gradients: !$.isTouch,
+				gradients: !JQUERY.isTouch,
 				elevation:50,
 				when: {
 					turned: function(e, page) {
@@ -120,10 +123,10 @@ exports.main = function () {
 		
 		JQUERY(window).bind('keydown', function(e) {		
 			if (e.keyCode==37) {
-				$('#magazine').turn('previous');
+				JQUERY('#magazine').turn('previous');
 			} else
 			if (e.keyCode==39) {
-				$('#magazine').turn('next');	
+				JQUERY('#magazine').turn('next');	
 			}
 		});
 
