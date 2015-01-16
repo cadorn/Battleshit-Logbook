@@ -1,5 +1,8 @@
 
 const JQUERY = require("jquery/dist/jquery");
+
+console.log("JQUERY", JQUERY);
+
 const TURN = require("turn/turn");
 
 
@@ -26,7 +29,7 @@ exports.main = function () {
 			JQUERY('#magazine').turn({
 				display: 'double',
 				acceleration: true,
-				gradients: !$.isTouch,
+				gradients: !JQUERY.isTouch,
 				elevation:50,
 				when: {
 					turned: function(e, page) {
@@ -38,10 +41,10 @@ exports.main = function () {
 		
 		JQUERY(window).bind('keydown', function(e) {		
 			if (e.keyCode==37) {
-				$('#magazine').turn('previous');
+				JQUERY('#magazine').turn('previous');
 			} else
 			if (e.keyCode==39) {
-				$('#magazine').turn('next');	
+				JQUERY('#magazine').turn('next');	
 			}
 		});
 
