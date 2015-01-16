@@ -5,33 +5,48 @@ const TURN = require("turn/turn");
 
 exports.main = function () {
 
-	JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
-	JQUERY("BODY").html(require("./client.html"));
+	try {
 
-	JQUERY(window).ready(function() {
+	console.log("1");
 
-console.log("DOM", JQUERY('#magazine'));
+		JQUERY("<STYLE></STYLE>").appendTo("HEAD").html(require("./client.css"));
 
-		JQUERY('#magazine').turn({
-			display: 'double',
-			acceleration: true,
-			gradients: !$.isTouch,
-			elevation:50,
-			when: {
-				turned: function(e, page) {
-					/*console.log('Current view: ', $(this).turn('view'));*/
+	console.log("2");
+
+		JQUERY("BODY").html(require("./client.html"));
+
+	console.log("3");
+
+		JQUERY(window).ready(function() {
+
+	console.log("4");
+
+	console.log("DOM", JQUERY('#magazine'));
+
+			JQUERY('#magazine').turn({
+				display: 'double',
+				acceleration: true,
+				gradients: !$.isTouch,
+				elevation:50,
+				when: {
+					turned: function(e, page) {
+						/*console.log('Current view: ', $(this).turn('view'));*/
+					}
 				}
+			});
+		});
+		
+		JQUERY(window).bind('keydown', function(e) {		
+			if (e.keyCode==37) {
+				$('#magazine').turn('previous');
+			} else
+			if (e.keyCode==39) {
+				$('#magazine').turn('next');	
 			}
 		});
-	});
-	
-	JQUERY(window).bind('keydown', function(e) {		
-		if (e.keyCode==37) {
-			$('#magazine').turn('previous');
-		} else
-		if (e.keyCode==39) {
-			$('#magazine').turn('next');	
-		}
-	});
+
+	} catch (err) {
+		console.error(err.stack);		
+	}
 
 }
