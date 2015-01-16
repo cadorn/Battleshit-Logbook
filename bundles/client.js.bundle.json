@@ -998,7 +998,7 @@
         },
         "expectExistingModules": {},
         "bundle": {
-          "path": "/playground/2014-12-26-promise-actor/HMS-Hood/bundles/client.js"
+          "path": "/playground/2014-12-26-promise-actor/HMS-Dorsetshire/bundles/client.js"
         },
         "warnings": [],
         "errors": [],
@@ -1014,7 +1014,7 @@
   "#pinf": {
     "status": 200,
     "data": {
-      "rootBundlePath": "/playground/2014-12-26-promise-actor/HMS-Hood/bundles/client.js"
+      "rootBundlePath": "/playground/2014-12-26-promise-actor/HMS-Dorsetshire/bundles/client.js"
     }
   }
 }
